@@ -1,1 +1,102 @@
+* {
+    box-sizing: border-box;
+}
 
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Allows the page to stretch and scroll */
+    background-color: #160e03; /* 15px gap */
+    font-family: Arial, sans-serif;
+}
+
+/* The main image box */
+.hero {
+    /* Takes up at least the full screen, but GROWS if text pushes it down */
+    min-height: calc(100vh - 50px); /* 25px margin top + 25px margin bottom */
+    width: calc(100% - 50px);       /* 25px margin left + 25px margin right */
+    margin: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;     /* Pushes text to bottom */
+    align-items: flex-start;       /* Pushes text to left */
+    padding: 40px;                 /* Space inside the box before text hits the edge */
+
+    background-image: url('houseyes.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    background-color: #160e03;     /* Fallback color */
+}
+
+/* Makes the text readable over the house image */
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px 35px;            /* Slightly smaller padding to save space */
+    border-radius: 12px;
+    max-width: 550px;
+}
+
+/* Your text colors */
+.hero-text h1 {
+    font-size: 2.8rem;            /* Reduced from 3.5rem (about 45px) */
+    color: white;
+    margin: 0 0 8px 0;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem; /* Big and bold */
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;            /* Reduced slightly */
+    color: white;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+}
+
+/* The "VISIT US" button */
+.hero-text button {
+    background-color: #f0c040;
+    border: none;
+    padding: 12px 35px;           /* Slightly smaller button */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #1a1a2e;
+}
+
+body {
+    margin: 0;
+    background-color: #160e03;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+main {
+    padding: 0; /* Remove the 50px padding from main, the .hero handles it now */
+}
+
+.blueprint-column {
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #160e03;
+    background-color: #eef3ff;
+    vertical-align: top;
+}
