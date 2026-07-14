@@ -5,4 +5,4 @@ Vision Builders, G3
 
 Unfinished Project
 
-(No License, Do not Copy or Distribute without permission)
+(No License)
