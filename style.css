@@ -7,15 +7,15 @@ html, body {
     padding: 0;
     min-height: 100%; /* Allows the page to stretch and scroll */
     background-color: #160e03; /* 15px gap */
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* The main image box */
 .hero {
     /* Takes up at least the full screen, but GROWS if text pushes it down */
-    min-height: calc(100vh - 50px); /* 25px margin top + 25px margin bottom */
-    width: calc(100% - 50px);       /* 25px margin left + 25px margin right */
-    margin: 25px;
+    min-height: calc(100vh - 100px); /* 50px margin top + 50px margin bottom */
+    width: calc(100% - 100px);       /* 50px margin left + 50px margin right */
+    margin: 50px;
 
     display: flex;
     flex-direction: column;
@@ -28,6 +28,8 @@ html, body {
     background-position: center;
     border-radius: 30px;
     background-color: #160e03;     /* Fallback color */
+
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 /* Makes the text readable over the house image */
@@ -61,13 +63,25 @@ html, body {
 .hero-text button {
     background-color: #f0c040;
     border: none;
-    padding: 12px 35px;           /* Slightly smaller button */
+    padding: 12px 35px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     color: #1a1a2e;
+    
+    /* --- Smooth transition so the shadow doesn't jump --- */
+    transition: all 0.3s ease;
 }
+
+/* --- When you hover over the button, it lifts up --- */
+.hero-text button:hover {
+    box-shadow: 0 6px 20px rgba(240, 192, 64, 0.5); /* Gold glow */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* --- Header and Navigation --- */
+/* --- also #160e03 is the default background color --- */
 
 body {
     margin: 0;
@@ -76,9 +90,18 @@ body {
 }
 
 header {
-    background-color: #1a1a2e;
+    background-color: #2e1f0d;
     color: white;
-    padding: 20px 40px;
+    padding: 18px 35px;
+    margin: 25px 25px 15px 25px; /* Matches the hero's gap */
+    border-radius: 30px;
+    
+    /* --- Makes the header float --- */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
@@ -99,4 +122,218 @@ main {
     border: 2px solid #160e03;
     background-color: #eef3ff;
     vertical-align: top;
+}
+
+/* --- WELCOME SECTION (Image + 4 Boxes) --- */
+
+.welcome-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: stretch;      /* Makes both sides equal height */
+    background-color: #160e03;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Left side - Image */
+.welcome-image {
+    flex: 1.0;                /* Slightly bigger than the right side */
+    min-width: 200px;
+    border-radius: 20px;
+    overflow: hidden;          /* Makes sure the image stays inside rounded corners */
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Crops image nicely to fill the box */
+    display: block;
+}
+
+/* Right side - Container for 4 boxes */
+.welcome-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Each individual box */
+.welcome-box {
+    background-color: #f8f6f2;
+    padding: 20px 25px;
+    border-radius: 15px;
+    border-left: 4px solid #1a1a2e;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect - boxes lift slightly */
+.welcome-box:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Box 1 */
+.welcome-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+
+.brand-box {
+    background-color: #1a1a2e;
+    border-left-color: #f0c040;
+    text-align: left;
+    padding: 20px 25px;
+}
+
+.brand-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Box 2 */
+.welcome-box:nth-child(2) p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Box 3 */
+.welcome-box:nth-child(3) p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Box 4 */
+.welcome-box:last-child p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- Responsive: Stack on Mobile --- */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;    /* Stack image on top, boxes below */
+        padding: 15px;
+    }
+    
+    .welcome-image {
+        min-height: 250px;         /* Image gets a fixed height on mobile */
+    }
+    
+    .welcome-box h2 {
+        font-size: 1.2rem;
+    }
+    
+    .brand-box h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- FLOOR PLANS WITH IMAGES --- */
+
+.floorplan-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0 40px 0;
+}
+
+.floorplan-item {
+    flex: 1 1 400px;
+    max-width: 550px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 20px 20px 15px 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floorplan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Image wrapper - handles rounded corners */
+.floorplan-image {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.floorplan-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Label below each image */
+.floorplan-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+    text-align: center;
+    margin: 12px 0 5px 0;
+    letter-spacing: 2px;
+}
+
+/* --- Floating Tagline (updated) --- */
+.blueprint-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #1a1a2e;
+    background-color: #2e1f0d;
+    margin: 20px 0 10px 0;
+    padding: 20px 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    letter-spacing: 3px;
+    border: 2px solid #1a1a2e;
+}
+
+/* --- Responsive: Stack on Mobile --- */
+@media (max-width: 768px) {
+    .floorplan-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .floorplan-label {
+        font-size: 1rem;
+    }
+    
+    .blueprint-tagline {
+        font-size: 1rem;
+        padding: 15px 20px;
+        letter-spacing: 2px;
+    }
 }
