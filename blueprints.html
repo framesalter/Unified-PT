@@ -1,91 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- This tells the browser how to read page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Page title (shows on browser tab) -->
-    <title>Vision Builders</title>
+    <title>Vision Builders - Blueprints</title>
 
-    <!-- LINK: Pulls in theme (style.css) -->
+    <link rel="icon" href="logo1.jpg" type="image/png">
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    
+
+    <!-- HEADER / NAVIGATION -->
     <header>
-        <h1>VISION BUILDERS</h1>
+        <h1 class="logo">VISION BUILDERS</h1>
         <nav>
-            <a href="index.html">HOME PAGE</a>
-            <a href="blueprints.html">BLUEPRINTS</a>
-            <a href="model.html">MODEL</a>
-            <a href="blog.html">BLOG</a>
+            <a href="index.html" class="nav-link">HOME PAGE</a>
+            <a href="blueprints.html" class="nav-link active">BLUEPRINTS</a>
+            <a href="model.html" class="nav-link">MODEL</a>
+            <a href="blog.html" class="nav-link">BLOG</a>
         </nav>
     </header>
-    <main class="blueprints-page">
-    
-    <!-- NEW: Welcome Section with Image + 4 Boxes -->
-    <section class="welcome-section">
-        
-        <!-- Left: Big Image -->
-        <div class="welcome-image">
-            <img src="logo1.jpg" alt="Logo">
-        </div>
-        
-        <!-- Right: 4 Content Boxes -->
-        <div class="welcome-content">
-            
-            <!-- Box 1 -->
-            <div class="welcome-box brand-box">
-                <h2>WELCOME TO VISION BUILDERS</h2>
-            </div>
-            
-            <!-- Box 2 -->
-            <div class="welcome-box">
-                <p>Discover detailed floor plans designed to inspire your next home project.</p>
-            </div>
-            
-            <!-- Box 3 -->
-            <div class="welcome-box">
-                <p>Where innovative design, quality craftsmanship, and your dream home come together.</p>
-            </div>
-            
-            <!-- Box 4 -->
-            <div class="welcome-box">
-                <p>Every blueprint is thoughtfully planned to maximize comfort, efficiency, and style.</p>
-            </div>
-            
-        </div>
-        
-    </section>
 
-    <!-- BLUEPRINTS CONTENT GOES BELOW -->
-    <h2 class="page-title">FLOOR PLANS</h2>
-    
-    <!-- Floor Plan Image Container -->
-    <div class="floorplan-container">
+    <!-- BLUEPRINTS PAGE -->
+    <main class="blueprints-page">
         
-        <!-- First Floor -->
-        <div class="floorplan-item">
-            <div class="floorplan-image">
-                <img src="firstfloor.png" alt="First Floor Plan">
+        <!-- Page Header with Animation -->
+        <div class="blueprints-header">
+            <div class="header-decoration">
+                <span class="deco-line"></span>
+                <span class="deco-icon">✦</span>
+                <span class="deco-line"></span>
             </div>
-            <h3 class="floorplan-label">FIRST FLOOR</h3>
+            <h1 class="blueprints-title">FLOOR PLANS</h1>
+            <p class="blueprints-subtitle">Explore the detailed blueprints of your future home</p>
+        </div>
+
+        <!-- Floor Plan Image Container -->
+        <div class="floorplan-container">
+            
+            <!-- First Floor -->
+            <div class="floorplan-item">
+                <div class="floorplan-image">
+                    <img src="firstfloor.png" alt="First Floor Plan" data-caption="FIRST FLOOR">
+                </div>
+                <h3 class="floorplan-label">FIRST FLOOR</h3>
+            </div>
+
+            <!-- Second Floor -->
+            <div class="floorplan-item">
+                <div class="floorplan-image">
+                    <img src="secondfloor.png" alt="Second Floor Plan" data-caption="SECOND FLOOR">
+                </div>
+                <h3 class="floorplan-label">SECOND FLOOR</h3>
+            </div>
+            
         </div>
         
-        <!-- Second Floor -->
-        <div class="floorplan-item">
-            <div class="floorplan-image">
-                <img src="secondfloor.png" alt="Second Floor Plan">
-            </div>
-            <h3 class="floorplan-label">SECOND FLOOR</h3>
+        <!-- Floating Tagline -->
+        <div class="blueprint-tagline">
+            <span class="tagline-icon">✦</span>
+            "BAHAY PARA SA KINABUKASAN" BLUEPRINT
+            <span class="tagline-icon">✦</span>
         </div>
         
-    </div>
-    
-    <!-- Floating Tagline at the bottom -->
-    <div class="blueprint-tagline">
-        "BAHAY PARA SA KINABUKASAN" BLUEPRINT
-    </div>
     </main>
-</body>>
+
+    
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-divider">
+            <span class="fd-line"></span>
+            <span class="fd-icon">✦</span>
+            <span class="fd-line"></span>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Vision Builders. All rights reserved.</p>
+        <p class="footer-credit">
+            <span class="credit-text">crafted with precision by</span>
+            <a href="https://github.com/framesalter" target="_blank" class="credit-brand">
+                ✦ framesdroid ✦
+            </a>
+        </p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+        <!-- IMAGE LIGHTBOX -->
+    <div id="imageLightbox" class="lightbox">
+        <span class="lightbox-close" id="lightboxClose">✕</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext">›</span>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
