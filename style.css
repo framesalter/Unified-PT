@@ -1626,16 +1626,17 @@ header {
     }
 }
 
-/* --- WELCOME SECTION UPGRADES --- */
+/* --- WELCOME SECTION --- */
 
 .welcome-section {
     position: relative;
+    background: transparent;
     overflow: hidden;
 }
 
-/* Glass-morphism effect on welcome boxes */
+/* Glass-morphism effect very nice */
 .welcome-box {
-    background: rgba(248, 246, 242, 0.85);
+    background: #2e1f0d;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1659,7 +1660,7 @@ header {
     opacity: 1;
 }
 
-/* Fade-in animations with stagger */
+/* Fade-in animations */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1737,6 +1738,7 @@ header {
     /* Welcome section */
     .welcome-section {
         margin: 20px 15px 30px 15px;
+        background-color: transparent;
         padding: 20px;
     }
 }
