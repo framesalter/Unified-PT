@@ -1,28 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- This tells the browser how to read page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Page title (shows on browser tab) -->
-    <title>Vision Builders</title>
+    <title>Vision Builders - Model</title>
 
-    <!-- LINK: Pulls in theme (style.css) -->
+    <link rel="icon" href="logo1.jpg" type="image/png">
+    
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    
+
+    <!-- HEADER / NAVIGATION -->
     <header>
-        <h1>VISION BUILDERS</h1>
+        <h1 class="logo">VISION BUILDERS</h1>
         <nav>
-            <a href="index.html">HOME PAGE</a>
-            <a href="blueprints.html">BLUEPRINTS</a>
-            <a href="model.html">MODEL</a>
-            <a href="blog.html">BLOG</a>
+            <a href="index.html" class="nav-link">HOME PAGE</a>
+            <a href="blueprints.html" class="nav-link">BLUEPRINTS</a>
+            <a href="model.html" class="nav-link active">MODEL</a>
+            <a href="blog.html" class="nav-link">BLOG</a>
         </nav>
     </header>
-    <main>
-        <p>MODEL PAGE - MODEL PLANS GO HERE</p>
+
+    <!-- MODEL PAGE -->
+    <main class="model-page">
+        
+        <!-- Model Hero Section -->
+        <div class="model-hero">
+            <!-- Animated overlay -->
+            <div class="model-overlay"></div>
+            
+            <!-- Floating particles -->
+            <div class="particles">
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+            </div>
+            
+            <div class="model-hero-text">
+                <h1 class="model-title">VISION BUILDERS</h1>
+                <h2 class="model-subtitle">MODELHOUSE</h2>
+                <p class="model-description">Explore our 3D model house design</p>
+            </div>
+        </div>
+        
     </main>
+
+    
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-divider">
+            <span class="fd-line"></span>
+            <span class="fd-icon">✦</span>
+            <span class="fd-line"></span>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Vision Builders. All rights reserved.</p>
+        <p class="footer-credit">
+            <span class="credit-text">crafted with precision by</span>
+            <a href="https://github.com/framesalter" target="_blank" class="credit-brand">
+                ✦ framesdroid ✦
+            </a>
+        </p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+
 </body>
 </html>
