@@ -7,8 +7,8 @@ const bouncingBtn = document.getElementById('bouncingBtn');
 // Set starting position and speed
 let xPos = 0;
 let yPos = 0;
-let xSpeed = 2.5;
-let ySpeed = 2.5;
+let xSpeed = 1.2;
+let ySpeed = 1.2;
 
 // Function to move the button
 function moveButton() {
